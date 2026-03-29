@@ -22,7 +22,7 @@ export default function DocPage({ html, meta }) {
     <div>
       <NavBar />
       <main className="p-8">
-        <article className="card" dangerouslySetInnerHTML={{ __html: html }} />
+        <article className="card markdown-content" dangerouslySetInnerHTML={{ __html: html }} />
       </main>
     </div>
   )

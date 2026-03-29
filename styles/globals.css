@@ -26,3 +26,28 @@ body {
 .topbar {
   @apply flex items-center justify-between gap-4 p-4 border-b border-white/10;
 }
+
+.markdown-content img,
+.markdown-content video {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.25rem;
+}
+
+.markdown-content p,
+.markdown-content li,
+.markdown-content blockquote {
+  white-space: pre-wrap;
+}
+
+.markdown-content .md-spacer {
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}

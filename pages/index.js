@@ -55,11 +55,12 @@ export default function Home({ previews }) {
 }
 
 export async function getStaticProps() {
+  const oarPlayerGif = `/api/asset?path=${encodeURIComponent('OarWeThereYetStuff/write-ups/gaming/player-head.gif')}`
   return {
     props: {
       previews: {
         gas: getFirstImageForDir('GASTeamStuff'),
-        oar: getFirstImageForDir('OarWeThereYetStuff'),
+        oar: oarPlayerGif,
         robotics: getFirstImageForDir('RoboticsStuff'),
       },
     },
