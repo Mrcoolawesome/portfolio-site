@@ -1,18 +1,22 @@
 import Link from 'next/link'
-import Button from './ui/Button'
 
 export default function NavBar() {
   return (
     <div className="topbar">
-      <div className="flex items-center gap-6">
-        <div className="text-lg font-bold">Devin Schutz</div>
-        <Link href="/"><Button>Home</Button></Link>
-        <Link href="/gas"><Button>GAS Team</Button></Link>
-        <Link href="/oar"><Button>Oar We There Yet</Button></Link>
-        <Link href="/robotics"><Button>Robotics</Button></Link>
+      <div className="topbar-brand">
+        <span>Devin Schutz</span>
       </div>
-      <div>
-        <Link href="/about"><Button>About</Button></Link>
+      <div className="topbar-links">
+        <Link href="/">Home</Link>
+        <Link href="/gas">GAS Team</Link>
+        <Link href="/oar">Oar We There Yet</Link>
+        <Link href="/robotics">Robotics</Link>
+        <Link href="/about">About</Link>
+      </div>
+      <div className="topbar-right">
+        <Link href="/about" className="topbar-right text-white/70 hover:text-white transition-colors text-sm">
+          More
+        </Link>
       </div>
     </div>
   )

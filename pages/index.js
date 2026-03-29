@@ -4,49 +4,73 @@ import { getFirstImageForDir } from '../lib/markdown'
 
 export default function Home({ previews }) {
   return (
-    <div>
+    <div className="min-h-screen bg-black">
       <NavBar />
-      <main className="p-8">
-        <h1 className="text-3xl mb-6">Portfolio Overview</h1>
-
-        <div className="grid md:grid-cols-3 gap-4">
-          <div className="card">
-            {previews.gas && (
-              <img
-                src={previews.gas}
-                alt="GAS preview"
-                className="w-full h-40 object-cover rounded border border-white/20 mb-4"
-              />
-            )}
-            <h2 className="text-xl">GAS Team History</h2>
-            <p className="mt-2">Writeups and media for the GAS team.</p>
-            <Link href="/gas" className="btn-outline mt-4 inline-block">Open</Link>
+      <main className="px-8 py-20">
+        <div className="max-w-2xl mx-auto">
+          <div className="mb-20 text-center">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
+              Things I've been building
+            </h1>
+            <p className="text-white/60 text-lg">
+              A collection of things I've built, experiments I've run, and problems I've enjoyed solving.
+            </p>
           </div>
 
-          <div className="card">
-            {previews.oar && (
-              <img
-                src={previews.oar}
-                alt="Oar preview"
-                className="w-full h-40 object-cover rounded border border-white/20 mb-4"
-              />
-            )}
-            <h2 className="text-xl">Oar We There Yet (Video Game)</h2>
-            <p className="mt-2">Design notes, images, and gifs for the game.</p>
-            <Link href="/oar" className="btn-outline mt-4 inline-block">Open</Link>
-          </div>
+          <div className="project-grid">
+            {/* GAS Team */}
+            <div className="project-card">
+              {previews.gas && (
+                <img
+                  src={previews.gas}
+                  alt="GAS Team"
+                  className="project-image"
+                />
+              )}
+              <h2>GAS Team History</h2>
+              <p>Writeups and media for the GAS team. Explore the journey, achievements, and technical insights from our team's work.</p>
+              <div className="project-links">
+                <Link href="/gas" className="project-links">
+                  Open →
+                </Link>
+              </div>
+            </div>
 
-          <div className="card">
-            {previews.robotics && (
-              <img
-                src={previews.robotics}
-                alt="Robotics preview"
-                className="w-full h-40 object-cover rounded border border-white/20 mb-4"
-              />
-            )}
-            <h2 className="text-xl">High School Robotics</h2>
-            <p className="mt-2">Robotics writeups and media.</p>
-            <Link href="/robotics" className="btn-outline mt-4 inline-block">Open</Link>
+            {/* Oar We There Yet */}
+            <div className="project-card">
+              {previews.oar && (
+                <img
+                  src={previews.oar}
+                  alt="Oar We There Yet"
+                  className="project-image"
+                />
+              )}
+              <h2>Oar We There Yet</h2>
+              <p>Design notes, images, and gifs for a creative video game project. Featuring game mechanics, visual design, and development insights.</p>
+              <div className="project-links">
+                <Link href="/oar" className="project-links">
+                  Open →
+                </Link>
+              </div>
+            </div>
+
+            {/* Robotics */}
+            <div className="project-card">
+              {previews.robotics && (
+                <img
+                  src={previews.robotics}
+                  alt="High School Robotics"
+                  className="project-image"
+                />
+              )}
+              <h2>High School Robotics</h2>
+              <p>Robotics writeups and media from competitive robotics. Technical documentation, competition highlights, and engineering solutions.</p>
+              <div className="project-links">
+                <Link href="/robotics" className="project-links">
+                  Open →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </main>
