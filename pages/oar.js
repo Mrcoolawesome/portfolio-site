@@ -8,6 +8,11 @@ function getTitleFromHtml(contentHtml, fallback) {
   return m[1].replace(/<[^>]+>/g, '').trim() || fallback
 }
 
+function getFirstImageFromHtml(contentHtml) {
+  const m = (contentHtml || '').match(/<img[^>]*src=["']([^"']+)["']/i)
+  return m ? m[1] : null
+}
+
 export default function Oar({ posts }) {
   return (
     <div className="min-h-screen bg-black">
@@ -21,6 +26,9 @@ export default function Oar({ posts }) {
           <div className="project-grid">
             {posts.map((p) => (
               <div key={p.slug} className="project-card">
+                {p.previewImage && (
+                  <img src={p.previewImage} alt={`${p.title} preview`} className="project-image" />
+                )}
                 <h2>{p.title}</h2>
                 {p.excerpt && <p>{p.excerpt}</p>}
                 <div className="project-links">
@@ -49,8 +57,9 @@ export async function getStaticProps() {
     const title = p.meta && p.meta.title
       ? p.meta.title
       : getTitleFromHtml(p.html, fileName)
+    const previewImage = getFirstImageFromHtml(p.html)
     const excerpt = (p.html || '').replace(/<[^>]+>/g, '').slice(0, 140)
-    return { slug, title, excerpt }
+    return { slug, title, excerpt, previewImage }
   })
   return { props: { posts } }
 }
