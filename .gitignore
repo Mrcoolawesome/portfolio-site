@@ -7,3 +7,24 @@ RoboticsStuff/*
 .next/*
 
 node_modules/
+
+# Ignore all GIFs by default in content folders
+GASTeamStuff/**/*.gif
+GASTeamStuff/**/*.GIF
+OarWeThereYetStuff/**/*.gif
+OarWeThereYetStuff/**/*.GIF
+RoboticsStuff/**/*.gif
+RoboticsStuff/**/*.GIF
+
+# Re-allow parent folders for whitelisted used GIFs
+!GASTeamStuff/GasTeamStuff/
+!OarWeThereYetStuff/write-ups/
+!OarWeThereYetStuff/write-ups/gaming/
+
+# Keep only GIFs referenced by markdown
+!GASTeamStuff/GasTeamStuff/testWithGraph.gif
+!OarWeThereYetStuff/write-ups/gaming/boat-lerping.gif
+!OarWeThereYetStuff/write-ups/gaming/grass-blade-regular.gif
+!OarWeThereYetStuff/write-ups/gaming/grass-clump.gif
+!OarWeThereYetStuff/write-ups/gaming/grass-field.gif
+!OarWeThereYetStuff/write-ups/gaming/player-head.gif
