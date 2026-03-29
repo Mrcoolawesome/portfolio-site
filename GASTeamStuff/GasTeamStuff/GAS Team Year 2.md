@@ -1,0 +1,3 @@
+During my second year with the GAS Team (Fall 2024 - Spring 2026) I mostly focused on outreach, and teaching new members how to do everything. In Fall, I presented in front of several classes on campus with 100+ people. We ended up getting the most amount of people joining the team that year than years before, and the software team specifically (which was typically the smallest team) tripled in size (went from 2 members to 6 members). 
+
+During this fall semester I also got to go to JPL with my co-lead Josh, since we were invited to participate in the FPrime workshop, and learn from the NASA developers first hand how to use their framework. It was an amazing experience, and I learned a lot through it. ![[MeInFrontOfJPLSign.jpg]]

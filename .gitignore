@@ -28,3 +28,23 @@ RoboticsStuff/**/*.GIF
 !OarWeThereYetStuff/write-ups/gaming/grass-clump.gif
 !OarWeThereYetStuff/write-ups/gaming/grass-field.gif
 !OarWeThereYetStuff/write-ups/gaming/player-head.gif
+
+# keep markdowns
+!OarWeThereYetStuff/write-ups/gaming/Player.md
+!OarWeThereYetStuff/write-ups/gaming/Shader Code.md
+!OarWeThereYetStuff/write-ups/gaming/Syncing Objects.md
+!OarWeThereYetStuff/write-ups/gaming/Blender Models.md
+
+!RoboticsStuff/roboticsObsidian/High School Robotics.md
+!RoboticsStuff/roboticsObsidian/IMG_0385.mov
+!RoboticsStuff/roboticsObsidian/IMG_0916.jpg
+!RoboticsStuff/roboticsObsidian/IMG_2218.jpg
+!RoboticsStuff/roboticsObsidian/IMG_3832.jpg
+!RoboticsStuff/roboticsObsidian/IMG_6921.jpg
+
+!GASTeamStuff/GasTeamStuff/GAS Team Year 1.md
+!GASTeamStuff/GasTeamStuff/GAS Team Year 2.md
+!GASTeamStuff/GasTeamStuff/GAS Team Year 3.md
+!GASTeamStuff/GasTeamStuff/MeInFrontOfJPLSign.jpg
+!GASTeamStuff/GasTeamStuff/MeInScrub.jpg
+!GASTeamStuff/GasTeamStuff/testWithGraph.gif

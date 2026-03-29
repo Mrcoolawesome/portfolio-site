@@ -1,0 +1,6 @@
+In my first year as part of the USU GAS CubeSat team, I really started learning all about Small Satellite technology and terms. I began getting taught how to use the FPrime framework, and getting familiar with all the aspects of making a Sattelite (the software, avionics, ADCS, environmental considerations, and even funding and outreach). 
+
+I didn't get to do much until I was a summer fellow, and worked on the satellite during the full summer of 2024. During this time, my co-lead Josh and I learned as much as we could about the FPrime framework. We spent one whole month just reading all of the documentation we could, and writing down our findings. We then began to start on the 'flat-sat' (satellite prototype) so that we could practice what we had learned on real hardware. The team had spare parts lying around (raspberry pi 0, Endurosat Transciever, Endurosat EPS..etc) and we were able to get the flat-sat to communicate with an IMU sensor and pull the data from it. Below shows a GIF of graphs within the FPrime framework that shows the x, y, and z positioning of the IMU changing as I shake it. 
+
+![[testWithGraph.gif]]
+![[MeInScrub.jpg]]
