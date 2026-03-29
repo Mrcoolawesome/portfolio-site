@@ -8,43 +8,11 @@ RoboticsStuff/*
 
 node_modules/
 
-# Ignore all GIFs by default in content folders
-GASTeamStuff/**/*.gif
-GASTeamStuff/**/*.GIF
-OarWeThereYetStuff/**/*.gif
-OarWeThereYetStuff/**/*.GIF
-RoboticsStuff/**/*.gif
-RoboticsStuff/**/*.GIF
-
-# Re-allow parent folders for whitelisted used GIFs
+# Keep deploy content folders fully tracked.
+# The site reads markdown and media from these directories at build/runtime.
 !GASTeamStuff/GasTeamStuff/
+!GASTeamStuff/GasTeamStuff/**
 !OarWeThereYetStuff/write-ups/
-!OarWeThereYetStuff/write-ups/gaming/
-
-# Keep only GIFs referenced by markdown
-!GASTeamStuff/GasTeamStuff/testWithGraph.gif
-!OarWeThereYetStuff/write-ups/gaming/boat-lerping.gif
-!OarWeThereYetStuff/write-ups/gaming/grass-blade-regular.gif
-!OarWeThereYetStuff/write-ups/gaming/grass-clump.gif
-!OarWeThereYetStuff/write-ups/gaming/grass-field.gif
-!OarWeThereYetStuff/write-ups/gaming/player-head.gif
-
-# keep markdowns and specific assets
-!OarWeThereYetStuff/write-ups/gaming/Player.md
-!OarWeThereYetStuff/write-ups/gaming/Shader\ Code.md
-!OarWeThereYetStuff/write-ups/gaming/Syncing\ Objects.md
-!OarWeThereYetStuff/write-ups/gaming/Blender\ Models.md
-
-!RoboticsStuff/roboticsObsidian/High\ School\ Robotics.md
-!RoboticsStuff/roboticsObsidian/IMG_0385.mov
-!RoboticsStuff/roboticsObsidian/IMG_0916.jpg
-!RoboticsStuff/roboticsObsidian/IMG_2218.jpg
-!RoboticsStuff/roboticsObsidian/IMG_3832.jpg
-!RoboticsStuff/roboticsObsidian/IMG_6921.jpg
-
-!GASTeamStuff/GasTeamStuff/GAS\ Team\ Year\ 1.md
-!GASTeamStuff/GasTeamStuff/GAS\ Team\ Year\ 2.md
-!GASTeamStuff/GasTeamStuff/GAS\ Team\ Year\ 3.md
-!GASTeamStuff/GasTeamStuff/MeInFrontOfJPLSign.jpg
-!GASTeamStuff/GasTeamStuff/MeInScrub.jpg
-!GASTeamStuff/GasTeamStuff/testWithGraph.gif
+!OarWeThereYetStuff/write-ups/**
+!RoboticsStuff/roboticsObsidian/
+!RoboticsStuff/roboticsObsidian/**
