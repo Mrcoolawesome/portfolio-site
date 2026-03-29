@@ -15,16 +15,71 @@ body {
   min-height: 100vh;
 }
 
+.topbar {
+  @apply flex items-center justify-center gap-8 px-8 py-6 border-b border-white/10 relative;
+}
+
+.topbar-brand {
+  @apply text-lg font-bold absolute left-8;
+}
+
+.topbar-links {
+  @apply flex items-center gap-8;
+}
+
+.topbar-links a {
+  @apply text-white hover:text-white/80 transition-colors font-medium text-sm;
+}
+
+.topbar-right {
+  @apply absolute right-8;
+}
+
+.topbar-right a {
+  @apply px-5 py-2 rounded-full font-medium text-sm transition-all;
+}
+
 .card {
-  @apply border border-white/40 rounded p-6 mb-4;
+  @apply border border-white/20 rounded-lg p-6 mb-4 hover:border-white/40 transition-all;
 }
 
 .btn-outline {
-  @apply border border-white rounded px-4 py-2 text-white inline-block;
+  @apply border border-white/30 rounded px-4 py-2 text-white inline-block hover:border-white/50 transition-colors;
 }
 
-.topbar {
-  @apply flex items-center justify-between gap-4 p-4 border-b border-white/10;
+.project-grid {
+  @apply max-w-2xl mx-auto;
+}
+
+.project-card {
+  @apply border border-white/20 rounded-lg p-8 mb-24 last:mb-0 hover:border-white/40 transition-all;
+}
+
+.project-card h2 {
+  @apply text-2xl font-bold mb-3;
+}
+
+.project-card p {
+  @apply text-white/70 mb-6 leading-relaxed;
+}
+
+.project-image {
+  @apply w-full rounded-lg mb-6 h-60 object-cover;
+}
+
+.project-links {
+  @apply flex gap-4 items-center;
+}
+
+.project-links a {
+  @apply text-white/70 hover:text-white transition-colors inline-flex items-center gap-1;
+}
+
+.markdown-content {
+  max-width: 56rem;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
 }
 
 .markdown-content img,
@@ -32,12 +87,18 @@ body {
   max-width: 100%;
   width: auto;
   height: auto;
-  max-height: 520px;
+  max-height: 600px;
   object-fit: contain;
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin: 2rem auto;
+  display: block;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
+  transition: border-color 0.3s ease;
+}
+
+.markdown-content img:hover,
+.markdown-content video:hover {
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .markdown-content p,

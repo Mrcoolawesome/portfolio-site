@@ -8,21 +8,37 @@ function getTitleFromHtml(contentHtml, fallback) {
   return m[1].replace(/<[^>]+>/g, '').trim() || fallback
 }
 
+function getFirstImageFromHtml(contentHtml) {
+  const m = (contentHtml || '').match(/<img[^>]*src=["']([^"']+)["']/i)
+  return m ? m[1] : null
+}
+
 export default function Gas({ posts }) {
   return (
-    <div>
+    <div className="min-h-screen bg-black">
       <NavBar />
-      <main className="p-8">
-        <h1 className="text-2xl mb-4">GAS Team History</h1>
-        {posts.length === 0 && <p>No markdown found in GASTeamStuff/GasTeamStuff</p>}
-        <div className="grid gap-4">
-          {posts.map((p) => (
-            <div key={p.slug} className="card">
-              <h3 className="text-lg">{p.title}</h3>
-              {p.excerpt && <p className="mt-2">{p.excerpt}</p>}
-              <Link href={`/gas/${p.slug}`} className="btn-outline mt-4 inline-block">Open</Link>
-            </div>
-          ))}
+      <main className="px-8 py-20">
+        <div className="max-w-2xl mx-auto">
+          <h1 className="text-5xl font-bold mb-12 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent leading-tight">
+            GAS Team History
+          </h1>
+          {posts.length === 0 && <p className="text-white/60">No markdown found in GASTeamStuff/GasTeamStuff</p>}
+          <div className="project-grid">
+            {posts.map((p) => (
+              <div key={p.slug} className="project-card">
+                {p.previewImage && (
+                  <img src={p.previewImage} alt={`${p.title} preview`} className="project-image" />
+                )}
+                <h2>{p.title}</h2>
+                {p.excerpt && <p>{p.excerpt}</p>}
+                <div className="project-links">
+                  <Link href={`/gas/${p.slug}`} className="project-links">
+                    Open →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </main>
     </div>
@@ -41,9 +57,10 @@ export async function getStaticProps() {
     const title = p.meta && p.meta.title
       ? p.meta.title
       : getTitleFromHtml(p.html, fileName)
+    const previewImage = getFirstImageFromHtml(p.html)
     // simple excerpt: first 120 chars of text (strip tags)
     const excerpt = (p.html || '').replace(/<[^>]+>/g, '').slice(0, 140)
-    return { slug, title, excerpt }
+    return { slug, title, excerpt, previewImage }
   })
   return { props: { posts } }
 }
