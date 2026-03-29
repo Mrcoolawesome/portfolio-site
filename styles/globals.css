@@ -75,6 +75,13 @@ body {
   @apply text-white/70 hover:text-white transition-colors inline-flex items-center gap-1;
 }
 
+.markdown-content {
+  max-width: 42rem;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
 .markdown-content img,
 .markdown-content video {
   max-width: 100%;
