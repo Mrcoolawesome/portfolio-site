@@ -13,11 +13,6 @@ export default function NavBar() {
         <Link href="/robotics">Robotics</Link>
         <Link href="/about">About</Link>
       </div>
-      <div className="topbar-right">
-        <Link href="/about" className="topbar-right text-white/70 hover:text-white transition-colors text-sm">
-          More
-        </Link>
-      </div>
     </div>
   )
 }

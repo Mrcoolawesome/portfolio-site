@@ -10,11 +10,8 @@ export default function Home({ previews }) {
         <div className="max-w-2xl mx-auto">
           <div className="mb-20 text-center">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
-              Things I've been building
+              Experiences
             </h1>
-            <p className="text-white/60 text-lg">
-              A collection of things I've built, experiments I've run, and problems I've enjoyed solving.
-            </p>
           </div>
 
           <div className="project-grid">
