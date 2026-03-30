@@ -16,19 +16,38 @@ body {
 }
 
 .topbar {
-  @apply flex items-center justify-center gap-8 px-8 py-6 border-b border-white/10 relative;
+  @apply flex items-center justify-center gap-8 px-8 py-8 border-b border-white/10 relative bg-black;
 }
 
 .topbar-brand {
-  @apply text-lg font-bold absolute left-8;
+  @apply text-2xl font-bold absolute left-8;
 }
 
 .topbar-links {
-  @apply flex items-center gap-8;
+  @apply flex items-center gap-10;
 }
 
 .topbar-links a {
-  @apply text-white hover:text-white/80 transition-colors font-medium text-sm;
+  @apply text-white font-medium text-lg relative;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.topbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.topbar-links a:hover::after {
+  transform: scaleX(1);
 }
 
 .topbar-right {
