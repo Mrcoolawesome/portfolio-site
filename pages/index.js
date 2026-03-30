@@ -89,7 +89,7 @@ export default function Home({ previews }) {
                 />
               )}
               <h2>Revo Technologies</h2>
-              <p>A writeup and media from my experience working at Revo Technologies.</p>
+              <p>My expierence at Revo Technolgies and a bit about the skills I gained from my summer there.</p>
               <div className="project-links">
                 <Link href="/revo" className="project-links">
                   Open →
