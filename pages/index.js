@@ -17,10 +17,10 @@ export default function Home({ previews }) {
 
           <div className="mb-20 text-center pb-8">
             <h1 className="text-5xl font-bold mb-4 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent leading-tight">
-              Experiences
+              About Me
             </h1>
             <p className="text-white/60 text-lg">
-              Developer, entrepenure, gamer.
+              I'm a developer expierenced in web development & embedded programming, as well has a game developer & entrepreneur.
             </p>
           </div>
 
@@ -34,8 +34,8 @@ export default function Home({ previews }) {
                   className="project-image"
                 />
               )}
-              <h2>GAS Team History</h2>
-              <p>Writeups and media for the GAS team. Explore the journey, achievements, and technical insights from our team's work.</p>
+              <h2>USU GAS CubeSat Team</h2>
+              <p>A bit about what I did and learned through the GAS team</p>
               <div className="project-links">
                 <Link href="/gas" className="project-links">
                   Open →
@@ -53,7 +53,7 @@ export default function Home({ previews }) {
                 />
               )}
               <h2>Oar We There Yet</h2>
-              <p>Design notes, images, and gifs for a creative video game project. Featuring game mechanics, visual design, and development insights.</p>
+              <p>Design notes, images, and gifs for the game 'Oar We There Yet' that my co-founder and I are currently developing.</p>
               <div className="project-links">
                 <Link href="/oar" className="project-links">
                   Open →
@@ -71,7 +71,7 @@ export default function Home({ previews }) {
                 />
               )}
               <h2>High School Robotics</h2>
-              <p>Robotics writeups and media from competitive robotics. Technical documentation, competition highlights, and engineering solutions.</p>
+              <p>A bit about my high school robotics expierences. This is where my programming journey began.</p>
               <div className="project-links">
                 <Link href="/robotics" className="project-links">
                   Open →

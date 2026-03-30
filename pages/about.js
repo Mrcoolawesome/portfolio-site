@@ -5,22 +5,22 @@ export default function About() {
     <div className="min-h-screen bg-black">
       <NavBar />
       <main className="px-8 py-20">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold mb-12 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent leading-tight">
             About / Contact
           </h1>
-          <div className="project-card">
-            <div className="flex items-center gap-8">
+          <div className="project-card about-card">
+            <div className="about-layout">
               <img
                 src="/api/photo"
                 alt="Photo of Devin"
-                style={{ width: 120, height: 120, objectFit: 'cover', borderRadius: '0.5rem' }}
+                className="about-photo"
               />
               <div>
-                <h2 className="text-2xl font-bold mb-6">Devin Schutz</h2>
-                <div className="flex flex-col gap-3">
+                <h2 className="text-3xl font-bold mb-8">Devin Schutz</h2>
+                <div className="about-links">
                   <a
-                    className="text-white/70 hover:text-white transition-colors inline-flex items-center gap-2 w-fit"
+                    className="about-link"
                     href="https://www.linkedin.com/in/devin-schutz/"
                     target="_blank"
                     rel="noreferrer"
@@ -28,7 +28,7 @@ export default function About() {
                     LinkedIn →
                   </a>
                   <a
-                    className="text-white/70 hover:text-white transition-colors inline-flex items-center gap-2 w-fit"
+                    className="about-link"
                     href="https://github.com/Mrcoolawesome"
                     target="_blank"
                     rel="noreferrer"
@@ -36,7 +36,7 @@ export default function About() {
                     GitHub →
                   </a>
                   <a
-                    className="text-white/70 hover:text-white transition-colors inline-flex items-center gap-2 w-fit"
+                    className="about-link"
                     href="mailto:schutzdevin@gmail.com"
                   >
                     Email →
