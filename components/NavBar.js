@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <div className="topbar">
       <div className="topbar-brand">
-        <span>Devin Schutz</span>
+        <Link href="/">Devin Schutz</Link>
       </div>
       <div className="topbar-links">
         <Link href="/">Home</Link>
