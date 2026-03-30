@@ -16,7 +16,7 @@ body {
 }
 
 .topbar {
-  @apply flex items-center justify-center gap-8 px-8 py-8 border-b border-white/10 relative bg-transparent;
+  @apply flex items-center justify-center gap-8 px-8 py-8 border-b border-white/10 relative bg-black/80;
 }
 
 .topbar-brand {
