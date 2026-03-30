@@ -7,6 +7,8 @@ const nextConfig = {
         'GASTeamStuff/**/*',
         'OarWeThereYetStuff/**/*',
         'RoboticsStuff/**/*',
+        'ChurchVolunteering/**/*',
+        'RevoTechnologies/**/*',
         '*.jpg',
         '*.png',
         '*.gif',
