@@ -2,12 +2,18 @@ import NavBar from '../components/NavBar'
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-black">
-      <NavBar />
-      <main className="px-8 py-20">
+    <div className="min-h-screen bg-black home-hero-root">
+      <div className="home-hero-clear" aria-hidden="true" />
+      <div className="home-hero-blur" aria-hidden="true" />
+      <div className="home-hero-vignette" aria-hidden="true" />
+
+      <div className="relative z-10">
+        <NavBar />
+      </div>
+      <main className="px-8 py-20 relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold mb-12 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent leading-tight">
-            About / Contact
+            Contact
           </h1>
           <div className="project-card about-card">
             <div className="about-layout">
