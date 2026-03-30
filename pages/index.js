@@ -5,12 +5,14 @@ import { getHomePreviews } from '../lib/homePreviews'
 export default function Home({ previews }) {
   return (
     <div className="min-h-screen bg-black home-hero-root">
-      <NavBar />
-      <main className="home-hero-main px-8 py-20">
-        <div className="home-hero-clear" aria-hidden="true" />
-        <div className="home-hero-blur" aria-hidden="true" />
-        <div className="home-hero-vignette" aria-hidden="true" />
+      <div className="home-hero-clear" aria-hidden="true" />
+      <div className="home-hero-blur" aria-hidden="true" />
+      <div className="home-hero-vignette" aria-hidden="true" />
 
+      <div className="relative z-10">
+        <NavBar />
+      </div>
+      <main className="px-8 py-20 relative z-10">
         <div className="relative z-10 max-w-7xl mx-auto">
 
           <div className="mb-20 text-center pb-8">
