@@ -71,7 +71,7 @@ export default function Home({ previews }) {
                 />
               )}
               <h2>High School Robotics</h2>
-              <p>A bit about my high school robotics expierences. This is where my programming journey began.</p>
+              <p>A bit about my high school robotics experiences. This is where my programming journey began.</p>
               <div className="project-links">
                 <Link href="/robotics" className="project-links">
                   Open →
@@ -89,7 +89,7 @@ export default function Home({ previews }) {
                 />
               )}
               <h2>Revo Technologies</h2>
-              <p>My expierence at Revo Technolgies and a bit about the skills I gained from my summer there.</p>
+              <p>My experience at Revo Technolgies and a bit about the skills I gained from my summer there.</p>
               <div className="project-links">
                 <Link href="/revo" className="project-links">
                   Open →
