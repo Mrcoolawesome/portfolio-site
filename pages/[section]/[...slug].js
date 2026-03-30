@@ -7,6 +7,7 @@ const SECTION_MAP = {
   oar: 'OarWeThereYetStuff/write-ups',
   robotics: 'RoboticsStuff/roboticsObsidian',
   revo: 'RevoTechnologies/revoWriteups',
+  churchvolunteering: 'ChurchVolunteering/SonriseWriteups',
 }
 
 function getFirstImageFromHtml(contentHtml) {

@@ -96,6 +96,24 @@ export default function Home({ previews }) {
                 </Link>
               </div>
             </div>
+
+            {/* Church Volunteering */}
+            <div className="project-card">
+              {previews.churchvolunteering && (
+                <img
+                  src={previews.churchvolunteering}
+                  alt="Church Volunteering"
+                  className="project-image"
+                />
+              )}
+              <h2>Church Volunteering</h2>
+              <p>My experience volunteering at my church and the media production projects I worked on.</p>
+              <div className="project-links">
+                <Link href="/churchvolunteering" className="project-links">
+                  Open →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </main>
