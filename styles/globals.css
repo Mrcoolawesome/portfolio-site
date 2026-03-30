@@ -48,19 +48,25 @@ body {
 }
 
 .project-grid {
-  @apply grid gap-8 max-w-6xl mx-auto;
-  grid-template-columns: 1fr;
+  @apply flex flex-wrap justify-center gap-8 max-w-6xl mx-auto;
+}
+
+.project-grid > .project-card {
+  width: 100%;
+  max-width: 34rem;
 }
 
 @media (min-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .project-grid > .project-card {
+    width: calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
   }
 }
 
 @media (min-width: 1180px) {
-  .project-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .project-grid > .project-card {
+    width: calc(33.333% - 1.34rem);
+    max-width: calc(33.333% - 1.34rem);
   }
 }
 

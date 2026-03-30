@@ -6,6 +6,7 @@ const SECTION_MAP = {
   gas: 'GASTeamStuff/GasTeamStuff',
   oar: 'OarWeThereYetStuff/write-ups',
   robotics: 'RoboticsStuff/roboticsObsidian',
+  revo: 'RevoTechnologies/revoWriteups',
 }
 
 function getFirstImageFromHtml(contentHtml) {

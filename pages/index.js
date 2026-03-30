@@ -78,6 +78,24 @@ export default function Home({ previews }) {
                 </Link>
               </div>
             </div>
+
+            {/* Revo Technologies */}
+            <div className="project-card">
+              {previews.revo && (
+                <img
+                  src={previews.revo}
+                  alt="Revo Technologies"
+                  className="project-image"
+                />
+              )}
+              <h2>Revo Technologies</h2>
+              <p>A writeup and media from my experience working at Revo Technologies.</p>
+              <div className="project-links">
+                <Link href="/revo" className="project-links">
+                  Open →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </main>
