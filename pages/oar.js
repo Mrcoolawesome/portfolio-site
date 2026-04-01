@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import NavBar from '../components/NavBar'
 import Link from 'next/link'
 import { getAllForDir } from '../lib/markdown'
@@ -38,7 +39,15 @@ export default function Oar({ posts, backgroundImage }) {
             {posts.map((p) => (
               <div key={p.slug} className="project-card">
                 {p.previewImage && (
-                  <img src={p.previewImage} alt={`${p.title} preview`} className="project-image" />
+                  <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                    <Image
+                      src={p.previewImage}
+                      alt={`${p.title} preview`}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
                 )}
                 <h2>{p.title}</h2>
                 {p.excerpt && <p>{p.excerpt}</p>}
@@ -73,5 +82,17 @@ export async function getStaticProps() {
     const excerpt = (p.html || '').replace(/<[^>]+>/g, '').slice(0, 140)
     return { slug, title, excerpt, previewImage }
   })
+  
+  // Sort with Shader Code and Syncing Objects at the top
+  const pinnedTitles = ['Shader Code', 'Syncing Objects']
+  posts.sort((a, b) => {
+    const aIsPinned = pinnedTitles.includes(a.title)
+    const bIsPinned = pinnedTitles.includes(b.title)
+    if (aIsPinned && !bIsPinned) return -1
+    if (!aIsPinned && bIsPinned) return 1
+    if (aIsPinned && bIsPinned) return pinnedTitles.indexOf(a.title) - pinnedTitles.indexOf(b.title)
+    return 0
+  })
+  
   return { props: { posts, backgroundImage: previews.oar } }
 }

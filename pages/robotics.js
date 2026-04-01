@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import NavBar from '../components/NavBar'
 import Link from 'next/link'
 import { getAllForDir } from '../lib/markdown'
@@ -38,7 +39,15 @@ export default function Robotics({ posts, backgroundImage }) {
             {posts.map((p) => (
               <div key={p.slug} className="project-card">
                 {p.previewImage && (
-                  <img src={p.previewImage} alt={`${p.title} preview`} className="project-image" />
+                  <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                    <Image
+                      src={p.previewImage}
+                      alt={`${p.title} preview`}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
                 )}
                 <h2>{p.title}</h2>
                 {p.excerpt && <p>{p.excerpt}</p>}

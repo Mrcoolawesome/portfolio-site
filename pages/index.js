@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import NavBar from '../components/NavBar'
 import { getHomePreviews } from '../lib/homePreviews'
 
@@ -28,11 +29,15 @@ export default function Home({ previews }) {
             {/* GAS Team */}
             <div className="project-card">
               {previews.gas && (
-                <img
-                  src={previews.gas}
-                  alt="GAS Team"
-                  className="project-image"
-                />
+                <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                  <Image
+                    src={previews.gas}
+                    alt="GAS Team"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
               )}
               <h2>USU GAS CubeSat Team</h2>
               <p>A bit about what I did and learned through the GAS team</p>
@@ -46,11 +51,15 @@ export default function Home({ previews }) {
             {/* Oar We There Yet */}
             <div className="project-card">
               {previews.oar && (
-                <img
-                  src={previews.oar}
-                  alt="Oar We There Yet"
-                  className="project-image"
-                />
+                <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                  <Image
+                    src={previews.oar}
+                    alt="Oar We There Yet"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
               )}
               <h2>Oar We There Yet</h2>
               <p>Design notes, images, and gifs for the game 'Oar We There Yet' that my co-founder and I are currently developing.</p>
@@ -64,11 +73,15 @@ export default function Home({ previews }) {
             {/* Robotics */}
             <div className="project-card">
               {previews.robotics && (
-                <img
-                  src={previews.robotics}
-                  alt="High School Robotics"
-                  className="project-image"
-                />
+                <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                  <Image
+                    src={previews.robotics}
+                    alt="High School Robotics"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
               )}
               <h2>High School Robotics</h2>
               <p>A bit about my high school robotics experiences. This is where my programming journey began.</p>
@@ -82,11 +95,15 @@ export default function Home({ previews }) {
             {/* Revo Technologies */}
             <div className="project-card">
               {previews.revo && (
-                <img
-                  src={previews.revo}
-                  alt="Revo Technologies"
-                  className="project-image"
-                />
+                <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                  <Image
+                    src={previews.revo}
+                    alt="Revo Technologies"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
               )}
               <h2>Revo Technologies</h2>
               <p>My experience at Revo Technolgies and a bit about the skills I gained from my summer there.</p>
@@ -100,11 +117,15 @@ export default function Home({ previews }) {
             {/* Church Volunteering */}
             <div className="project-card">
               {previews.churchvolunteering && (
-                <img
-                  src={previews.churchvolunteering}
-                  alt="Church Volunteering"
-                  className="project-image"
-                />
+                <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                  <Image
+                    src={previews.churchvolunteering}
+                    alt="Church Volunteering"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
               )}
               <h2>Church Volunteering</h2>
               <p>My experience volunteering at my church and the media production projects I worked on.</p>

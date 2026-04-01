@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import NavBar from '../components/NavBar'
 
 export default function About() {
@@ -17,10 +18,13 @@ export default function About() {
           </h1>
           <div className="project-card about-card">
             <div className="about-layout">
-              <img
+              <Image
                 src="/api/photo"
                 alt="Photo of Devin"
-                className="about-photo"
+                width={220}
+                height={220}
+                className="about-photo rounded-lg"
+                unoptimized
               />
               <div>
                 <h2 className="text-3xl font-bold mb-8">Devin Schutz</h2>
