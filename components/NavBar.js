@@ -19,6 +19,7 @@ export default function NavBar() {
           <Link href="/robotics">Robotics</Link>
           <Link href="/revo">Revo Technologies</Link>
           <Link href="/churchvolunteering">Church Volunteering</Link>
+          <Link href="/personalprojects">Personal Projects</Link>
           <Link href="/about">Contact</Link>
         </div>
 
@@ -44,6 +45,7 @@ export default function NavBar() {
             <Link href="/robotics" onClick={() => setIsOpen(false)}>Robotics</Link>
             <Link href="/revo" onClick={() => setIsOpen(false)}>Revo Technologies</Link>
             <Link href="/churchvolunteering" onClick={() => setIsOpen(false)}>Church Volunteering</Link>
+            <Link href="/personalprojects" onClick={() => setIsOpen(false)}>Personal Projects</Link>
             <Link href="/about" onClick={() => setIsOpen(false)}>Contact</Link>
           </div>
         </div>
