@@ -5,7 +5,7 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div>
+    <div className="relative z-50">
       <div className="topbar">
         <div className="topbar-brand">
           <Link href="/">Devin Schutz</Link>
@@ -36,7 +36,7 @@ export default function NavBar() {
 
       {/* Mobile nav */}
       {isOpen && (
-        <div className="md:hidden fixed top-16 left-0 right-0 bg-black border-b border-white/10 z-[999]">
+        <div className="md:hidden fixed top-16 left-0 right-0 bg-black border-b border-white/10 z-[9999]">
           <div className="flex flex-col px-8 py-4 gap-4">
             <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
             <Link href="/gas" onClick={() => setIsOpen(false)}>GAS Team</Link>
