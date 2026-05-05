@@ -16,18 +16,22 @@ body {
 }
 
 .topbar {
-  @apply flex items-center justify-center gap-8 px-8 py-6 border-b border-white/10 relative;
+  @apply flex items-center justify-between gap-4 px-4 md:px-8 py-4 md:py-6 border-b border-white/10 relative;
 }
 
 .topbar-brand {
-  @apply text-lg font-bold absolute left-8;
+  @apply text-base md:text-lg font-bold;
 }
 
 .topbar-links {
-  @apply flex items-center gap-8;
+  @apply flex items-center gap-4 md:gap-8;
 }
 
 .topbar-links a {
+  @apply text-white hover:text-white/80 transition-colors font-medium text-xs md:text-sm;
+}
+
+.topbar-links.mobile a {
   @apply text-white hover:text-white/80 transition-colors font-medium text-sm;
 }
 
@@ -52,11 +56,11 @@ body {
 }
 
 .project-card {
-  @apply border border-white/20 rounded-lg p-8 mb-24 last:mb-0 hover:border-white/40 transition-all;
+  @apply border border-white/20 rounded-lg p-6 md:p-8 mb-12 md:mb-24 last:mb-0 hover:border-white/40 transition-all;
 }
 
 .project-card h2 {
-  @apply text-2xl font-bold mb-3;
+  @apply text-xl md:text-2xl font-bold mb-3;
 }
 
 .project-card p {
@@ -64,15 +68,15 @@ body {
 }
 
 .project-image {
-  @apply w-full rounded-lg mb-6 h-60 object-cover;
+  @apply w-full rounded-lg mb-6 h-40 md:h-60 object-cover;
 }
 
 .project-links {
-  @apply flex gap-4 items-center;
+  @apply flex flex-wrap gap-4 items-center;
 }
 
 .project-links a {
-  @apply text-white/70 hover:text-white transition-colors inline-flex items-center gap-1;
+  @apply text-white/70 hover:text-white transition-colors inline-flex items-center gap-1 text-sm md:text-base;
 }
 
 .markdown-content {
