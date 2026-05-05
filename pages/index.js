@@ -5,7 +5,7 @@ import { getHomePreviews } from '../lib/homePreviews'
 
 export default function Home({ previews }) {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <NavBar />
       <main className="px-4 md:px-8 py-12 md:py-20">
         <div className="mb-12 md:mb-20 text-center pb-8 max-w-2xl mx-auto">
