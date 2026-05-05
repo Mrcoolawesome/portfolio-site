@@ -3,11 +3,20 @@ import Image from 'next/image'
 import NavBar from '../components/NavBar'
 import { getHomePreviews } from '../lib/homePreviews'
 
-export default function Home({ previews }) {
+export default function Home({ previews, backgroundImage }) {
   return (
-    <div className="min-h-screen bg-black">
-      <NavBar />
-      <main className="px-4 md:px-8 py-12 md:py-20">
+    <div
+      className="min-h-screen bg-black section-hero-root"
+      style={{ '--section-bg-image': `url("${backgroundImage || '/background.jpg'}")` }}
+    >
+      <div className="section-hero-clear" aria-hidden="true" />
+      <div className="section-hero-blur" aria-hidden="true" />
+      <div className="section-hero-vignette" aria-hidden="true" />
+
+      <div className="relative z-10">
+        <NavBar />
+      </div>
+      <main className="px-4 md:px-8 py-12 md:py-20 relative z-10">
         <div className="mb-12 md:mb-20 text-center pb-8 max-w-2xl mx-auto">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent leading-tight">
               Experiences
@@ -138,6 +147,7 @@ export async function getStaticProps() {
   return {
     props: {
       previews,
+      backgroundImage: '/background.jpg',
     },
   }
 }
