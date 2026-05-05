@@ -16,15 +16,15 @@ body {
 }
 
 .topbar {
-  @apply flex items-center justify-start gap-4 px-4 md:px-8 py-4 md:py-6 border-b border-white/10 relative;
+  @apply flex items-center justify-center gap-4 px-4 md:px-8 py-4 md:py-6 border-b border-white/10 relative;
 }
 
 .topbar-brand {
-  @apply text-base md:text-lg font-bold;
+  @apply text-base md:text-lg font-bold absolute left-4 md:left-8;
 }
 
 .topbar-links {
-  @apply items-center gap-4 md:gap-8;
+  @apply flex items-center gap-4 md:gap-8;
 }
 
 .topbar-links a {
