@@ -8,7 +8,7 @@ export default function NavBar() {
     <div className="relative">
       <div className="topbar">
         <div className="topbar-brand">
-          <Link href="/">Devin Schutz</Link>
+          <Link href="/about">Devin Schutz</Link>
         </div>
 
         {/* Desktop nav */}
