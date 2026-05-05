@@ -16,7 +16,7 @@ body {
 }
 
 .topbar {
-  @apply flex items-center justify-between gap-4 px-4 md:px-8 py-4 md:py-6 border-b border-white/10 relative;
+  @apply flex items-center justify-start gap-4 px-4 md:px-8 py-4 md:py-6 border-b border-white/10 relative;
 }
 
 .topbar-brand {

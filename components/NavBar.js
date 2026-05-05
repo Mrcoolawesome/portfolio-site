@@ -12,7 +12,7 @@ export default function NavBar() {
 
       {/* Mobile menu button */}
       <button
-        className="md:hidden flex flex-col gap-1"
+        className="md:hidden flex flex-col gap-1 ml-auto"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
