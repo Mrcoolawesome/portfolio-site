@@ -147,7 +147,7 @@ export async function getStaticProps() {
   return {
     props: {
       previews,
-      backgroundImage: previews.gas || '/background.jpg',
+      backgroundImage: '/background.jpg',
     },
   }
 }
