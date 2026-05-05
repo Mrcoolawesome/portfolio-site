@@ -7,7 +7,7 @@ export default function NavBar() {
   return (
     <div className="topbar">
       <div className="topbar-brand">
-        <span>Devin Schutz</span>
+        <Link href="/">Devin Schutz</Link>
       </div>
 
       {/* Mobile menu button */}
@@ -27,7 +27,9 @@ export default function NavBar() {
         <Link href="/gas">GAS Team</Link>
         <Link href="/oar">Oar We There Yet</Link>
         <Link href="/robotics">Robotics</Link>
-        <Link href="/about">About</Link>
+        <Link href="/revo">Revo Technologies</Link>
+        <Link href="/churchvolunteering">Church Volunteering</Link>
+        <Link href="/about">Contact</Link>
       </div>
 
       {/* Mobile nav */}

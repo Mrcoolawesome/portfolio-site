@@ -11,6 +11,12 @@ const MIME = {
   webm: 'video/webm',
 }
 
+export const config = {
+  api: {
+    responseLimit: false,
+  },
+}
+
 export default function handler(req, res) {
   const q = req.query.path
   if (!q) {

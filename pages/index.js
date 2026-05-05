@@ -1,6 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import NavBar from '../components/NavBar'
-import { getFirstImageForDir } from '../lib/markdown'
+import { getHomePreviews } from '../lib/homePreviews'
 
 export default function Home({ previews }) {
   return (
@@ -21,14 +22,18 @@ export default function Home({ previews }) {
             {/* GAS Team */}
             <div className="project-card">
               {previews.gas && (
-                <img
-                  src={previews.gas}
-                  alt="GAS Team"
-                  className="project-image"
-                />
+                <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                  <Image
+                    src={previews.gas}
+                    alt="GAS Team"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
               )}
-              <h2>GAS Team History</h2>
-              <p>Writeups and media for the GAS team. Explore the journey, achievements, and technical insights from our team's work.</p>
+              <h2>USU GAS CubeSat Team</h2>
+              <p>A bit about what I did and learned through the GAS team</p>
               <div className="project-links">
                 <Link href="/gas" className="project-links">
                   Open →
@@ -39,14 +44,18 @@ export default function Home({ previews }) {
             {/* Oar We There Yet */}
             <div className="project-card">
               {previews.oar && (
-                <img
-                  src={previews.oar}
-                  alt="Oar We There Yet"
-                  className="project-image"
-                />
+                <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                  <Image
+                    src={previews.oar}
+                    alt="Oar We There Yet"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
               )}
               <h2>Oar We There Yet</h2>
-              <p>Design notes, images, and gifs for a creative video game project. Featuring game mechanics, visual design, and development insights.</p>
+              <p>Design notes, images, and gifs for the game 'Oar We There Yet' that my co-founder and I are currently developing.</p>
               <div className="project-links">
                 <Link href="/oar" className="project-links">
                   Open →
@@ -57,16 +66,64 @@ export default function Home({ previews }) {
             {/* Robotics */}
             <div className="project-card">
               {previews.robotics && (
-                <img
-                  src={previews.robotics}
-                  alt="High School Robotics"
-                  className="project-image"
-                />
+                <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                  <Image
+                    src={previews.robotics}
+                    alt="High School Robotics"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
               )}
               <h2>High School Robotics</h2>
-              <p>Robotics writeups and media from competitive robotics. Technical documentation, competition highlights, and engineering solutions.</p>
+              <p>A bit about my high school robotics experiences. This is where my programming journey began.</p>
               <div className="project-links">
                 <Link href="/robotics" className="project-links">
+                  Open →
+                </Link>
+              </div>
+            </div>
+
+            {/* Revo Technologies */}
+            <div className="project-card">
+              {previews.revo && (
+                <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                  <Image
+                    src={previews.revo}
+                    alt="Revo Technologies"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+              )}
+              <h2>Revo Technologies</h2>
+              <p>My experience at Revo Technolgies and a bit about the skills I gained from my summer there.</p>
+              <div className="project-links">
+                <Link href="/revo" className="project-links">
+                  Open →
+                </Link>
+              </div>
+            </div>
+
+            {/* Church Volunteering */}
+            <div className="project-card">
+              {previews.churchvolunteering && (
+                <div className="relative h-60 rounded-lg mb-6 overflow-hidden">
+                  <Image
+                    src={previews.churchvolunteering}
+                    alt="Church Volunteering"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+              )}
+              <h2>Church Volunteering</h2>
+              <p>My experience volunteering at my church and the media production projects I worked on.</p>
+              <div className="project-links">
+                <Link href="/churchvolunteering" className="project-links">
                   Open →
                 </Link>
               </div>
@@ -79,14 +136,10 @@ export default function Home({ previews }) {
 }
 
 export async function getStaticProps() {
-  const oarPlayerGif = `/api/asset?path=${encodeURIComponent('OarWeThereYetStuff/write-ups/gaming/player-head.gif')}`
+  const previews = getHomePreviews()
   return {
     props: {
-      previews: {
-        gas: getFirstImageForDir('GASTeamStuff'),
-        oar: oarPlayerGif,
-        robotics: getFirstImageForDir('RoboticsStuff'),
-      },
+      previews,
     },
   }
 }
