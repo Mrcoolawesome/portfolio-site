@@ -36,22 +36,24 @@ export default function PersonalProjects() {
             </p>
           </div>
 
-          <div className="project-grid">
+          <div className="space-y-16">
             {projects.map((project, idx) => (
-              <div key={idx} className="project-card">
-                <div className="relative h-60 rounded-lg mb-6 overflow-hidden border border-white/10">
+              <div key={idx} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <div className="relative h-96 lg:h-screen lg:max-h-96 rounded-lg overflow-hidden border border-white/10 bg-black">
                   <iframe
                     src={project.url}
                     className="w-full h-full border-0"
                     title={`${project.title} preview`}
                   />
                 </div>
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
-                <div className="project-links">
-                  <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-links">
-                    Visit →
-                  </a>
+                <div className="space-y-4">
+                  <h2 className="text-3xl font-bold text-white">{project.title}</h2>
+                  <p className="text-white/70 leading-relaxed">{project.description}</p>
+                  <div className="pt-4">
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-links">
+                      Visit →
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
