@@ -8,7 +8,7 @@ export default function About() {
       <div className="home-hero-blur" aria-hidden="true" />
       <div className="home-hero-vignette" aria-hidden="true" />
 
-      <div className="relative z-10">
+      <div className="relative z-50">
         <NavBar />
       </div>
       <main className="px-8 py-20 relative z-10">

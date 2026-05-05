@@ -13,7 +13,7 @@ export default function Home({ previews, backgroundImage }) {
       <div className="section-hero-blur" aria-hidden="true" />
       <div className="section-hero-vignette" aria-hidden="true" />
 
-      <div className="relative z-10">
+      <div className="relative z-50">
         <NavBar />
       </div>
       <main className="px-4 md:px-8 py-12 md:py-20 relative z-10">
