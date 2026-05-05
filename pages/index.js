@@ -8,17 +8,16 @@ export default function Home({ previews }) {
     <div className="min-h-screen bg-black">
       <NavBar />
       <main className="px-4 md:px-8 py-12 md:py-20">
-        <div className="max-w-2xl mx-auto">
-          <div className="mb-12 md:mb-20 text-center pb-8">
+        <div className="mb-12 md:mb-20 text-center pb-8 max-w-2xl mx-auto">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent leading-tight">
               Experiences
             </h1>
             <p className="text-white/60 text-base md:text-lg">
               Developer, entrepenure, gamer.
             </p>
-          </div>
+        </div>
 
-          <div className="project-grid">
+        <div className="project-grid">
             {/* GAS Team */}
             <div className="project-card">
               {previews.gas && (
@@ -128,7 +127,6 @@ export default function Home({ previews }) {
                 </Link>
               </div>
             </div>
-          </div>
         </div>
       </main>
     </div>
