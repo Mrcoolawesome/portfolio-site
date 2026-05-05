@@ -1,0 +1,11 @@
+To create the absolutely amazing animations in the game we used motion capture hardware & software. I own 6 Vive 1.0 trackers along with an HTC Vive Pro headset and controllers. Since the character just has arms without any hands, and legs without any feet, it was actually the perfect model to use to do motion capture with our setup. Here's a video of me recording myself with my Vive trackers to create the sitting animation:
+
+![[VID_20260401_190558181.mp4]]
+
+Our process was this: I would first record the motion capture data with a program called [Mocap Fusion](https://store.steampowered.com/app/1540000/Mocap_Fusion__VR/). The program took up a ton of resources, specifically RAM when using it, and so it would crash often. When we were satisfied with what we saw in the preview in the app of the recorded motion, Mocap Fusion would export it as a pre-made blender rig. I would then take that exported rig, remap its bones' animation data to our blender rig, and then start the process of cleaning up the animation in blender.
+
+Cleaning up the animation in blender was by far the most time-consuming part of the process. Since I don't really have any background in animation, it took me a while to understand how to find sections of the animation that were 'loopable'. Once I did find a loopable section, I'd take that section, smooth out the movements so it didn't look so jittery (since the Vive 1.0 trackers can be very jittery), then make sure the animation was facing the right direction. This last bit, making sure the animation was facing the right direction, was the most tedious part. Mocap Fusion exports the animation rotations using quaternions, which made it very difficult to fix the rotations within blender.  Once all that was done and saved in blender, the animation would get automatically imported into Godot, and I'd just set the animation to loop. 
+
+Overall, I'm proud of the animations since I had zero clue how to do motion capture before this project, and now I've gotten the process down pretty well I'm able to create a looping character animation in just a few hours. 
+
+![[Pasted image 20260505131639.png]]
