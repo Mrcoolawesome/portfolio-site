@@ -57,20 +57,20 @@ body {
 
 .project-grid > .project-card {
   width: 100%;
-  max-width: 34rem;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
   .project-grid > .project-card {
     width: calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
+    max-width: none;
   }
 }
 
 @media (min-width: 1180px) {
   .project-grid > .project-card {
     width: calc(33.333% - 1.34rem);
-    max-width: calc(33.333% - 1.34rem);
+    max-width: none;
   }
 }
 
