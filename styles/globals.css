@@ -16,38 +16,23 @@ body {
 }
 
 .topbar {
-  @apply flex items-center justify-center gap-8 px-8 py-8 border-b border-white/10 relative bg-black/80;
+  @apply flex items-center justify-center gap-4 px-4 md:px-8 py-4 md:py-6 border-b border-white/10 relative;
 }
 
 .topbar-brand {
-  @apply text-2xl font-bold absolute left-8;
+  @apply text-base md:text-lg font-bold absolute left-4 md:left-8;
 }
 
 .topbar-links {
-  @apply flex items-center gap-10;
+  @apply flex items-center gap-4 md:gap-8;
 }
 
 .topbar-links a {
-  @apply text-white font-medium text-lg relative;
-  position: relative;
-  transition: color 0.3s;
+  @apply text-white hover:text-white/80 transition-colors font-medium text-xs md:text-sm;
 }
 
-.topbar-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.topbar-links a:hover::after {
-  transform: scaleX(1);
+.topbar-links.mobile a {
+  @apply text-white hover:text-white/80 transition-colors font-medium text-sm;
 }
 
 .topbar-right {
@@ -72,20 +57,20 @@ body {
 
 .project-grid > .project-card {
   width: 100%;
-  max-width: 34rem;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
   .project-grid > .project-card {
     width: calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
+    max-width: none;
   }
 }
 
 @media (min-width: 1180px) {
   .project-grid > .project-card {
     width: calc(33.333% - 1.34rem);
-    max-width: calc(33.333% - 1.34rem);
+    max-width: none;
   }
 }
 
@@ -152,11 +137,11 @@ body {
 }
 
 .project-card {
-  @apply border border-white/20 rounded-lg p-8 hover:border-white/40 transition-all h-full;
+  @apply border border-white/20 rounded-lg p-6 md:p-8 mb-12 md:mb-24 last:mb-0 hover:border-white/40 transition-all;
 }
 
 .project-card h2 {
-  @apply text-2xl font-bold mb-3;
+  @apply text-xl md:text-2xl font-bold mb-3;
 }
 
 .project-card p {
@@ -164,15 +149,15 @@ body {
 }
 
 .project-image {
-  @apply w-full rounded-lg mb-6 h-60 object-cover;
+  @apply w-full rounded-lg mb-6 h-40 md:h-60 object-cover;
 }
 
 .project-links {
-  @apply flex gap-4 items-center;
+  @apply flex flex-wrap gap-4 items-center;
 }
 
 .project-links a {
-  @apply text-white/70 hover:text-white transition-colors inline-flex items-center gap-1;
+  @apply text-white/70 hover:text-white transition-colors inline-flex items-center gap-1 text-sm md:text-base;
 }
 
 .about-card {

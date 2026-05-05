@@ -5,27 +5,19 @@ import { getHomePreviews } from '../lib/homePreviews'
 
 export default function Home({ previews }) {
   return (
-    <div className="min-h-screen bg-black home-hero-root">
-      <div className="home-hero-clear" aria-hidden="true" />
-      <div className="home-hero-blur" aria-hidden="true" />
-      <div className="home-hero-vignette" aria-hidden="true" />
-
-      <div className="relative z-10">
-        <NavBar />
-      </div>
-      <main className="px-8 py-20 relative z-10">
-        <div className="relative z-10 max-w-7xl mx-auto">
-
-          <div className="mb-20 text-center pb-8">
-            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent leading-tight">
-              About Me
+    <div className="min-h-screen bg-black">
+      <NavBar />
+      <main className="px-4 md:px-8 py-12 md:py-20">
+        <div className="mb-12 md:mb-20 text-center pb-8 max-w-2xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent leading-tight">
+              Experiences
             </h1>
-            <p className="text-white/60 text-lg">
-              I'm a developer expierenced in web development & embedded programming, as well has a game developer & entrepreneur.
+            <p className="text-white/60 text-base md:text-lg">
+              Developer, entrepenure, gamer.
             </p>
-          </div>
+        </div>
 
-          <div className="project-grid">
+        <div className="project-grid">
             {/* GAS Team */}
             <div className="project-card">
               {previews.gas && (
@@ -135,7 +127,6 @@ export default function Home({ previews }) {
                 </Link>
               </div>
             </div>
-          </div>
         </div>
       </main>
     </div>
