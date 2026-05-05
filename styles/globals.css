@@ -24,7 +24,7 @@ body {
 }
 
 .topbar-links {
-  @apply flex items-center gap-4 md:gap-8;
+  @apply items-center gap-4 md:gap-8;
 }
 
 .topbar-links a {
