@@ -22,7 +22,7 @@ export default function Home({ previews, backgroundImage }) {
               Experiences
             </h1>
             <p className="text-white/60 text-base md:text-lg">
-              Developer, entrepenure, gamer.
+              Developer, entrepreneur, gamer.
             </p>
         </div>
 
