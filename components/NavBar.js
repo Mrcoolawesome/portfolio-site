@@ -7,7 +7,7 @@ export default function NavBar() {
   return (
     <div className="relative">
       <div className="topbar">
-        <div className="topbar-brand md:hidden">
+        <div className="topbar-brand md:hidden lg:block">
           <Link href="/about">Devin Schutz</Link>
         </div>
 
